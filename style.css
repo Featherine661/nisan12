@@ -1,0 +1,716 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+  .layar-dalam {
+    width: 1000px;
+    margin: auto;
+  }
+  .layar-penuh {
+    width: 100%;
+  }
+  nav {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+  }
+  nav.putih {
+    background-color: #fff;
+  }
+  nav .logo {
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+  }
+  nav .logo img {
+    vertical-align: middle;
+    width: 80px;
+  }
+  
+  nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+  }
+  
+  nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* pengaturan header */
+  header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+  }
+  header .intro {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+  }
+  header .intro h3 {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  .tombol {
+    background-color: #c86b85;
+    height: 40px;
+    line-height: 42px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+  }
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 50%;
+    z-index: -1;
+  }
+  .tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  .tombol-menu .garis {
+    height: 3px;
+    background-color: #fff;
+  }
+
+  #aboutus {
+    background: linear-gradient(to right, #ffffff, #f7f7f7);
+    padding: 80px 20px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #aboutus h3 {
+    text-align: center;
+    font-size: 36px;
+    color: #d40000;
+    margin-bottom: 20px;
+  }
+  
+  #aboutus .ringkasan {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  
+  .konten-isi {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .about-box h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  .about-box h2 {
+    font-size: 22px;
+    color: #d40000;
+    margin-top: 30px;
+  }
+  
+  .about-box p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  
+  .about-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .about-box ul li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .about-box ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .info-kontak {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .judul-feature {
+    text-align: center;
+    font-size: 36px;
+    color: #d40000;
+    margin-bottom: 10px;
+  }
+  
+  .ringkasan-feature {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+  }
+  
+  .fitur-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+  
+  .fitur-item {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .fitur-item:hover {
+    transform: translateY(-8px);
+  }
+  
+  .fitur-item img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+  
+  
+  section {
+    padding: 50px 0px 50px 0px;
+  }
+  section h3 {
+    font-size: 30px;
+  }
+  section h3::after {
+    content: "";
+    border-bottom: 5px solid #c86b85;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+  }
+  #aboutus,
+  #Offers,
+  #blog {
+    text-align: center;
+
+  }
+  section p.ringkasan {
+    font-style: italic;
+    font-size: 18px;
+    color: #ababab;
+  }
+  section .konten-isi p {
+    font-style: normal;
+  }
+  nav.putih {
+    background-color: #fff;
+  }
+  nav.putih .tombol-menu .garis {
+    background-color: #333;
+  }
+  nav.putih ul li a {
+    color: #333;
+  }
+  nav .logo img.hitam {
+    display: none;
+  }
+  section.abuabu {
+    background-color: #f5f6f6;
+  }
+  .support,
+  .tim,
+  .blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .support h6,
+  .tim h6 {
+    margin: 0px;
+    margin-top: 20px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .support img {
+    width: 50px;
+  }
+  .support div,
+  .tim div {
+    text-align: center;
+    width: 26%;
+  }
+  s.gallery-section {
+    background-color: #111;
+    padding: 60px 20px;
+    color: white;
+  }
+  
+  .judul-gallery {
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: #ff3333;
+    margin-bottom: 10px;
+  }
+  
+  .ringkasan-gallery {
+    text-align: center;
+    font-size: 18px;
+    color: #0f0e0e;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 51, 51, 0.3);
+  }
+  
+  /* Tombol */
+.btn-pesan {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #ff4444;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-pesan:hover {
+  background-color: #ff0000;
+}
+
+.judul-offers {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Orbitron', sans-serif;
+  color: #0c0b0b;
+  margin-bottom: 10px;
+}
+
+.ringkasan-offers {
+  text-align: center;
+  color: #1a1616;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  text-align: center;
+  color: #ffe600;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.offers-grid.satu {
+  display: flex;
+  justify-content: center;
+}
+
+.offer-card {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+  max-width: 450px;
+  animation: fadeInUp 0.9s ease;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.offer-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.offer-content h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ff4444;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.offer-content .harga {
+  color: #ffe600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.offer-content p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.btn-pesan {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #ff4444;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-pesan:hover {
+  background-color: #ff0000;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  section.quote {
+    background: url("asset/background-bromo.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    padding: 100px;
+  }
+  section.quote .layar-dalam p {
+    display: inline;
+    background: url("asset/quote-icon.png") no-repeat;
+    padding: 40px;
+  }
+  .tim img {
+    width: 100%;
+    box-shadow: 0px -10px 30px #ccc;
+    border-radius: 5px;
+  }
+  #blog {
+    background-color: #111;
+    padding: 60px 20px;
+  }
+  
+  .judul-blog {
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .ringkasan-blog {
+    text-align: center;
+    color: #bbb;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .blog-card {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    max-width: 340px;
+    transition: 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 20px;
+    color: #ccc;
+  }
+  
+  .blog-content h4 {
+    font-size: 20px;
+    color: #ff4444;
+    margin-bottom: 10px;
+  }
+  
+  .blog-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .btn-blog {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #ff4444;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-blog:hover {
+    background-color: #e60000;
+  }
+  
+  
+  .footer-kontak {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 0;
+    color: #fff;
+  }
+  
+  .kontak-kiri,
+  .kontak-kanan {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .kontak-kiri h4,
+  .kontak-kanan h4 {
+    color: #ff2e2e;
+    margin-bottom: 15px;
+  }
+  
+  .kontak-kiri p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .kontak-kanan form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .kontak-kanan input,
+  .kontak-kanan textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1c1c1c;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .kontak-kanan input::placeholder,
+  .kontak-kanan textarea::placeholder {
+    color: #999;
+  }
+  
+  .kontak-kanan button {
+    background-color: #ff2e2e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .kontak-kanan button:hover {
+    background-color: #d90000;
+  }
+  
+  footer {
+    background-color: #0f0f0f;
+  }
+  
+  footer .copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #222;
+    padding: 20px 0;
+  }
+  
+  
+  @media screen and (max-width: 991.98px) {
+    .layar-dalam {
+      width: 90%;
+    }
+    nav .menu ul {
+      display: none;
+      margin-top: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    nav .menu ul li {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+      line-height: 40px;
+    }
+    nav .menu ul li a {
+      color: #d6aaaa;
+    }
+    .tombol-menu {
+      display: flex;
+    }
+    .blog .area {
+      display: block;
+    }
+    .blog div.area div {
+      width: 100%;
+    }
+    .blog .area .gambar {
+      border-radius: 5px 5px 0px 0px;
+      height: 200px;
+    }
+    .support {
+      display: block;
+    }
+    .support div {
+      width: 100%;
+      padding-bottom: 30px;
+    }
+  }
